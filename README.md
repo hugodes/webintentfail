@@ -1,26 +1,17 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## How to reproduce the error:
 
-## How to use this template
+Launch the app (on anrdoid)
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Launch the file explorer and use the share button to open the file in the "WebIntent" app.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+The console will read:
 
-### With the Ionic CLI:
+````
+vendor.js:57857 Native: tried calling WebIntent.getIntent, but the WebIntent plugin is not installed.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+vendor.js:57857 Native: tried calling WebIntent.onIntent, but the WebIntent plugin is not installed.
+(anonymous) @ VM150:1
+vendor.js:57863 Install the WebIntent plugin: 'ionic cordova plugin add com-darryncampbell-cordova-plugin-intent'
+main.js:195 t {__zone_symbol__state: false, __zone_symbol__value: "plugin_not_installed"}
+main.js:196 {error: "plugin_not_installed"}
+````
